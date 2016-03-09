@@ -20,6 +20,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-19491723-3']);
         _gaq.push(['_trackPageview']);
+        
         var Deal = function (data) {
             "use strict";
             var self = this;
@@ -224,7 +225,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
                                 <div><strong>Offer:</strong> <span data-bind="html: dealText"></span></div>
                                 <div data-bind="visible: !isNaN(totalPrice())"><strong>Total Price:</strong> &pound;<span data-bind="text: totalPrice"></span></div>
                                 <div data-bind="visible: !isNaN(totalSize())"><strong>Total Size:</strong> <span data-bind="text: totalSize"></span> <span data-bind="text: largeMeasureUnit"></span>(s)</div>
-                            </div class="span6">
+                            </div>
                             <div class="span6">
                                 <div data-bind="visible: unitMeasure() != ''"><strong>Price per item:</strong> &pound;<span data-bind="text: offerprice"></span></div>
                                 <div data-bind="visible: unitMeasure() != '' && unitMeasure() != 'items'"><strong>Price per 100<span data-bind="text: smallMeasureUnit"></span>:</strong> &pound;<span data-bind="text: smallMeasurePrice"></span></div>
@@ -242,24 +243,25 @@ title: Deal Checker - Compare supermarket deals to get the best value
         <hr>
         <footer>
             <div>Designed, developed and &copy; 2013 <a href="https://ben.cheetham.me.uk/" title="Produced by Ben Cheetham">Ben Cheetham</a>
-            <div class="pull-right"><div class="g-plus" data-action="share" data-width="200"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.fudgeapps.uk/deal-checker">Tweet</a>
-            <div class="fb-like" data-href="https://www.fudgeapps.uk/deal-checker" data-send="true" data-width="225" data-show-faces="false"></div>
-            </div>
+                <div class="pull-right">
+                    <div class="g-plus" data-action="share" data-width="200"></div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.fudgeapps.uk/deal-checker">Tweet</a>
+                    <div class="fb-like" data-href="https://www.fudgeapps.uk/deal-checker" data-send="true" data-width="225" data-show-faces="false"></div>
+                </div>
             </div>	
         </footer>
     </div>
 
     <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
-    window.___gcfg = {lang: 'en-GB'};
+        window.___gcfg = {lang: 'en-GB'};
 
-    (function() {
-        var po = document.createElement('script'); po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
+        (function() {
+            var po = document.createElement('script'); po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
     </script>
 </body>
 </html>
