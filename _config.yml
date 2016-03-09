@@ -1,0 +1,17 @@
+title: Fudge Apps
+description: 
+
+url: https://fudgeapps.github.io
+
+analytics : UA-19491723-3
+
+safe: true
+timezone: Europe/London
+lsi: false
+permalink: /blog/:year/:month/:title
+
+exclude:
+  - README.md
+  
+gems:
+  - jekyll-redirect-from
