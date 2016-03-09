@@ -1,3 +1,6 @@
+---
+title: Deal Checker - Compare supermarket deals to get the best value 
+---
 <!DOCTYPE html>
 <html lang="en-GB" itemscope itemtype="http://schema.org/Article" manifest="cache.manifest">
 <head>
@@ -28,7 +31,7 @@
             this.unitSize = ko.observable(data.unitSize);
             this.unitMeasure = ko.observable(data.unitMeasure);
 
-            this.setDeal = function (d) { console.log('1', d); self.deal(d); };
+            this.setDeal = function (d) { self.deal(d); };
 
             this.totalSize = ko.computed(function () {
                 var size = this.unitSize();
