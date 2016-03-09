@@ -12,7 +12,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet">
 	<link href="/assets/css/bootplus.min.css" rel="stylesheet">
 	<link href="/assets/css/bootplus-responsive.min.css" rel="stylesheet">
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	<script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
 	<script src="https://ssl.google-analytics.com/ga.js" async></script>
