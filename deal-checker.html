@@ -155,7 +155,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
             <p class="lead">Which is better? Two 1.35 litre bottles of orange juice for &pound;4.50 or one 900ml bottle at &pound;1.09?</p>
             <p class="lead">Use this calculator to compare supermarket deals and find out which one is the best value.</p>
 
-            <div class="card mb-2" data-bind="foreach: deals, visible: deals().length > 0">
+            <div class="card mb-1" data-bind="foreach: deals, visible: deals().length > 0">
                 <div class="card-body text-center">
                     <h5 class="card-title">Buy</h5>
 
@@ -164,7 +164,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
                             <input type="number" class="form-control text-center" step="1" min="0" value="1" name="stdQty" data-bind="value: stdQty" required>
                         </div>
                         <div class="col text-nowrap">
-                            containing
+                            <p class="pt-1">containing</p>
                         </div>
                         <div class="col">
                             <input class="form-control text-center" type="number" min="0" step="0.01" required name="unitsize" data-bind="value: unitSize">
