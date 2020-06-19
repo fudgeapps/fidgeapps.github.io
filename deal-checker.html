@@ -144,7 +144,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
     <meta itemprop="description" content="Which is better? Two 1.35 litre bottles of orange juice for &pound;4.50 or one 900ml bottle at &pound;1.09? Use this calculator to compare supermarket deals and find out which one is the best value.">
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-dark bg-primary mb-3">
     <div class="container">
         <span class="navbar-brand mb-0 h1">Deal Checker</span>
     </div>
@@ -163,14 +163,14 @@ title: Deal Checker - Compare supermarket deals to get the best value
                         <div class="col">
                             <input type="number" class="form-control" step="1" min="0" value="1" name="stdQty" data-bind="value: stdQty" required>
                         </div>
-                        <div class="col text-nowrap">
-                            item that contains
+                        <div class="col">
+                            containing
                         </div>
                         <div class="col">
                             <div class="input-group">
                                 <input class="form-control" type="number" min="0" step="0.01" required name="unitsize" data-bind="value: unitSize">
                                 <div class="input-group-append">
-                                    <select required name="unitmeasure" data-bind="value: unitMeasure">
+                                    <select required name="unitmeasure" class="form-control" data-bind="value: unitMeasure">
                                         <option></option>
                                         <optgroup label="Multipack">
                                             <option>items</option>
@@ -204,6 +204,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
 
                     <div data-bind="visible: deal() == 2" class="form-group form-row">
                         <div class="col">
+                            <h5 class="card-title">for</h5>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="special-price-label">&pound;</span>
