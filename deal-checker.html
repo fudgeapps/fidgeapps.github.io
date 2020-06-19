@@ -161,41 +161,39 @@ title: Deal Checker - Compare supermarket deals to get the best value
 
                     <div class="form-group form-row">
                         <div class="col">
-                            <input type="number" class="form-control" step="1" min="0" value="1" name="stdQty" data-bind="value: stdQty" required>
+                            <input type="number" class="form-control text-center" step="1" min="0" value="1" name="stdQty" data-bind="value: stdQty" required>
                         </div>
                         <div class="col">
                             containing
                         </div>
                         <div class="col">
-                            <div class="input-group">
-                                <input class="form-control" type="number" min="0" step="0.01" required name="unitsize" data-bind="value: unitSize">
-                                <div class="input-group-append">
-                                    <select required name="unitmeasure" class="form-control" data-bind="value: unitMeasure">
-                                        <option></option>
-                                        <optgroup label="Multipack">
-                                            <option>items</option>
-                                        </optgroup>
-                                        <optgroup label="Volume">
-                                            <option>ml</option>
-                                            <option>l</option>
-                                        </optgroup>
-                                        <optgroup label="Weight">
-                                            <option>g</option>
-                                            <option>kg</option>
-                                        </optgroup>
-                                    </select>
-                                </div>
-                            </div>
+                            <input class="form-control text-center" type="number" min="0" step="0.01" required name="unitsize" data-bind="value: unitSize">
+                        </div>
+                        <div class="col">
+                            <select required name="unitmeasure" class="form-control" data-bind="value: unitMeasure">
+                                <option></option>
+                                <optgroup label="Multipack">
+                                    <option>items</option>
+                                </optgroup>
+                                <optgroup label="Volume">
+                                    <option>ml</option>
+                                    <option>l</option>
+                                </optgroup>
+                                <optgroup label="Weight">
+                                    <option>g</option>
+                                    <option>kg</option>
+                                </optgroup>
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
+                                <label class="btn btn-primary active">
                                 <input type="radio" name="deal" value="2" data-bind="checked: deal"> for
                                 </label>
-                                <label class="btn btn-secondary">
+                                <label class="btn btn-primary">
                                 <input type="radio" name="deal" value="1" data-bind="checked: deal"> multi-buy deal
                                 </label>
                             </div>
@@ -226,10 +224,12 @@ title: Deal Checker - Compare supermarket deals to get the best value
                                     <span class="input-group-text">each</span>
                                 </div>
                             </div>
-                            <h5 class="card-title">get</h5>
-                            <div class="input-group">
-                                <input type="number" class="form-control" step="1" min="0" value="1" name="specialqty" data-bind="value: specialQty" required>
-                                <div class="input-group-append">
+                            <h5 class="card-title mt-2">get</h5>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="number" class="form-control text-center" step="1" min="0" value="1" name="specialqty" data-bind="value: specialQty" required>
+                                </div>
+                                <div class="col">
                                     <select class="form-control" name="specialrate" data-bind="value: specialRate">
                                         <option value="0">free</option>
                                         <option value="0.5">half-price</option>
@@ -240,11 +240,11 @@ title: Deal Checker - Compare supermarket deals to get the best value
                     </div>
                 </div>
 
-                <div class="card-footer" data-bind="visible: dealText() != '' && totalPrice() > 0">
-                    <p>You will pay &pound;<span data-bind="text: totalPrice"></span> for <span data-bind="text: totalSize"></span> <span data-bind="text: largeMeasureUnitWord"></span>.</p>
+                <div class="card-footer text-center" data-bind="visible: dealText() != '' && totalPrice() > 0">
+                    <p class="lead mt-2 font-weight-bold">You will pay &pound;<span data-bind="text: totalPrice"></span> for <span data-bind="text: totalSize"></span> <span data-bind="text: largeMeasureUnitWord"></span>.</p>
                     <p data-bind="visible: stdQty() > 1 || unitMeasure() == 'items'">The price per item is &pound;<span data-bind="text: offerprice"></span>.</p>
-                    <p data-bind="visible: unitMeasure() != '' && unitMeasure() != 'items'">The price per <strong>100<span data-bind="text: smallMeasureUnit"></span></strong> is &pound;<span data-bind="text: smallMeasurePrice"></span> 
-                        and per <strong><span data-bind="text: largeMeasureUnit"></span></strong> is &pound;<span data-bind="text: largeMeasurePrice"></span>.</p>
+                    <p data-bind="visible: unitMeasure() != '' && unitMeasure() != 'items'">The price per 100<span data-bind="text: smallMeasureUnit"></span> is &pound;<span data-bind="text: smallMeasurePrice"></span> 
+                        and per <span data-bind="text: largeMeasureUnit"></span> is &pound;<span data-bind="text: largeMeasurePrice"></span>.</p>
                 </div>
             </div>
 
