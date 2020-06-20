@@ -128,7 +128,7 @@ title: Deal Checker - Compare supermarket deals to get the best value
             "use strict";
             var self = this;
             self.deals = ko.observableArray([]);
-            self.addDeal = function () { self.deals.push(new Deal({ stdQty: 1, specialQty: 1, price: 0, calculated: true })); };
+            self.addDeal = function () { self.deals.push(new Deal({ stdQty: 1, specialQty: 1, price: 0, calculated: true, deal: 2 })); };
             self.removeDeal = function (deal) { self.deals.remove(deal); };
         };
         var dvm;
